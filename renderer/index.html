@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Reviewer</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="app-container">
+    <!-- App Header with Window Controls on Left -->
+    <div class="app-header">
+      <div class="window-controls">
+        <span class="window-control close" id="close-btn"></span>
+        <span class="window-control minimize" id="minimize-btn"></span>
+        <span class="window-control maximize" id="maximize-btn"></span>
+      </div>
+      <h1>AI Resume Reviewer</h1>
+    </div>
+    
+    <div class="content">
+      <!-- Output Container -->
+      <div class="output-container">
+        <!-- This div will contain the rendered markdown -->
+        <div id="output"></div>
+        
+        <!-- New ATS Review Section -->
+        <div id="ats-section" class="ats-section">
+          <div class="ats-header">
+            <h2>ATS Review</h2>
+            <div class="ats-score-indicator">
+              <span class="score-label">ATS Score</span>
+              <div class="score-value" id="ats-score">--</div>
+            </div>
+          </div>
+          <div id="ats-content"></div>
+        </div>
+        
+        <div class="empty-state" id="empty-state">
+          <div class="empty-state-icon">📝</div>
+          <h3>Ready to analyze and rank Resumes</h3>
+          <p>Upload resumes and paste a job description below to get feedback</p>
+        </div>
+      </div>
+      
+      <!-- Input Section -->
+      <div class="input-section">
+        <div class="input-controls">
+          <div id="resume-file-select">
+            <span>Add Resume</span>
+            <span class="file-info"></span>
+          </div>
+        </div>
+        
+        <div class="textarea-wrapper">
+          <textarea id="jd" placeholder="Paste the job description here..."></textarea>
+        </div>
+        
+        <div class="action-bar">
+          <div class="status">
+            <div class="status-indicator ready"></div>
+            <span>Ready</span>
+          </div>
+          
+          <button id="evaluate">Evaluate ✨</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

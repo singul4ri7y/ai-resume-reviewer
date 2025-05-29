@@ -12,7 +12,7 @@ CrunchResume uses local LLaMA 3.2 inference using Ollama to provide feedback.
 
 ![Demo 3](demo/demo-3.jpg "Demo 3")
 
-<video src="demo/demo.mp4" type="video/mp4"></video>
+[![Demo video]()](demo/demo.mp4)
 
 ## 2. How to use
 ### Platform support

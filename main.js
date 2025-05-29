@@ -1,10 +1,9 @@
 const { app, net, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('path')
-const os = require('os')
 const fs = require('fs')
 const pdfparse = require('pdf-parse')
 
-// Creates the browser window
+// Creates the main window
 function create_window() {
     const win = new BrowserWindow({
         width: 400,
@@ -122,7 +121,7 @@ ipcMain.handle('evaluate-ats', async (_, resume_path) => {
     // Extract resume content in plain text
     const resume_content = (await pdfparse(fs.readFileSync(resume_path))).text;
     const payload = JSON.stringify({
-        model: 'llama3.2',
+        model: 'llama3.2:latest',
         prompt: `You are an expert ATS (Applicant Tracking System) analyzer.
 
 I will give you the content of a resume.

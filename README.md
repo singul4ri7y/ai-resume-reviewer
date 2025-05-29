@@ -2,7 +2,7 @@
 
 CrunchResume allows you to review your resume against job description and gives feedback on relevance and ATS readability using AI!
 
-CrunchResume uses local LLaMA 3.2 inference using Ollama to provide feedback.
+CrunchResume uses local LLaMA 3.2 inference using Ollama to provide feedback. This app uses an Electron frontend + REST API backend to communicate with Ollama.
 
 ## 1. Demonstration
 
